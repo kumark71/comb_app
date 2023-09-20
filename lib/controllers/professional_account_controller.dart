@@ -78,20 +78,21 @@ class ProfessionalAccountController extends GetxController {
 
   void submit() {
     print("object");
-    // if (selectedProfile.value == "Profile") {
-    //   profileError.value = "Please Select Profile";
-    // } else {
-    //   profileError.value = "";
-    // }
+    profileError.value = "";
+    if (selectedProfile.value == "Profile") {
+      profileError.value = "";
+    } else {
+      profileError.value = "";
+    }
 
     if (fullName.value.isEmpty) {
-      fullName.value="a";
+      fullName.value="User";
     } else {
       fullNameError.value = "";
     }
 
     if (state.value.isEmpty) {
-      state.value="a";
+      state.value="others";
     } else {
       stateError.value = "";
     }
@@ -106,6 +107,7 @@ class ProfessionalAccountController extends GetxController {
         if (value != null) {
           AuthController authController = Get.find();
           authController.saveUser().then((value) {
+            authController.ProfessionalUserStatus.value = "1";
             Get.offAllNamed("/home");
             // if (authController.ProfessionalUserStatus == "0") {
             //   Get.offAllNamed("/accountStatus");
