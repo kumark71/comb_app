@@ -78,20 +78,20 @@ class ProfessionalAccountController extends GetxController {
 
   void submit() {
     print("object");
-    if (selectedProfile.value == "Profile") {
-      profileError.value = "Please Select Profile";
-    } else {
-      profileError.value = "";
-    }
+    // if (selectedProfile.value == "Profile") {
+    //   profileError.value = "Please Select Profile";
+    // } else {
+    //   profileError.value = "";
+    // }
 
     if (fullName.value.isEmpty) {
-      fullNameError.value = "Full Name is required";
+      fullName.value="a";
     } else {
       fullNameError.value = "";
     }
 
     if (state.value.isEmpty) {
-      stateError.value = "State is required";
+      state.value="a";
     } else {
       stateError.value = "";
     }
@@ -106,15 +106,16 @@ class ProfessionalAccountController extends GetxController {
         if (value != null) {
           AuthController authController = Get.find();
           authController.saveUser().then((value) {
-            if (authController.ProfessionalUserStatus == "0") {
-              Get.offAllNamed("/accountStatus");
-            } else if (authController.ProfessionalUserStatus.value == "1") {
-              Get.offAllNamed("/home");
-            } else if (authController.ProfessionalUserStatus.value == "2") {
-              Get.offAllNamed("/accountStatus");
-            } else if (authController.ProfessionalUserStatus.value == "3") {
-              Get.offAllNamed("/accountStatus");
-            }
+            Get.offAllNamed("/home");
+            // if (authController.ProfessionalUserStatus == "0") {
+            //   Get.offAllNamed("/accountStatus");
+            // } else if (authController.ProfessionalUserStatus.value == "1") {
+            //   Get.offAllNamed("/home");
+            // } else if (authController.ProfessionalUserStatus.value == "2") {
+            //   Get.offAllNamed("/accountStatus");
+            // } else if (authController.ProfessionalUserStatus.value == "3") {
+            //   Get.offAllNamed("/accountStatus");
+            // }
           });
         } else {
           // Constants.showMessage("Error", value.reasonPhrase.toString());

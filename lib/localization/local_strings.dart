@@ -5,11 +5,22 @@ class LocaleString extends Translations {
   Map<String, Map<String, String>> get keys => {
         // ENGLISH LANGUAGE
         'en_US': {
+          'test_type':'Test Type',
           'hi': 'Hi',
+          'lets_setup_your':' "Let\'s setup your',
+          'account':'account',
           'take_glucose_reading': 'Take Glucose Reading',
           'screening_reports': 'Screening Reports',
           'how_to_use_app': 'How to use this application?',
           'edit_profile': 'Edit Profile',
+          'full_name' : 'Full Name',
+          'take_test_sample':'Take Test Sample',
+          'male':'Male',
+          'female': 'Female',
+          'pregnancy_test': 'Pregnancy Test',
+          'malaria_test' : 'Malaria Test',
+          'dengue_test': 'Dengue Test',
+          'hiv_test': 'HIV Test',
           'write_review': 'Write a Review',
           'privacy_policy': 'Privacy Policy',
           'terms_of_use': 'Terms of Use',
@@ -105,6 +116,17 @@ class LocaleString extends Translations {
         },
         // HINDI LANGUAGE
         'hi_IN': {
+          'test_type':'परीक्षण प्रकार',
+          'take_test_sample': 'परीक्षण नमूना लें',
+          'account':'खाता',
+          'lets_setup_your':'चलो अपना सेटअप करें',
+          'male':'पुरुष',
+          'female':'महिला',
+          'full_name':'पूरा नाम',
+          'hiv_test' : 'एचआईवी परीक्षण',
+          'dengue_test': 'डेंगू परीक्षण',
+          'malaria_test': 'मलेरिया परीक्षण',
+          'pregnancy_test': 'गर्भावस्था परीक्षण',
           'background_should_be_white': 'पृष्ठभूमि सफेद होनी चाहिए। ',
           'and': 'और',
           'should_accurately_display_mid_height_strip':

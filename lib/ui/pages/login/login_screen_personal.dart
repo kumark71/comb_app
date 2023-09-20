@@ -53,29 +53,10 @@ class LoginPersonal extends StatelessWidget {
                       ),
                       Spacer(),
                       SizedBox(
-                        child: Column(
+                        child: 
+                        Column(
+                          
                           children: [
-                            GestureDetector(
-                              onTap: () {
-                                loginController.editNum();
-                              },
-                              child: loginController.isSentOtp == 1
-                                  ? Container(
-                                      padding: EdgeInsets.all(8),
-                                      width: size.width * .8,
-                                      child: Text(
-                                        "Edit Mobile Number",
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .labelLarge!
-                                            .copyWith(
-                                              color: Theme.of(context)
-                                                  .colorScheme
-                                                  .onPrimary,
-                                            ),
-                                      ))
-                                  : Container(),
-                            ),
                             Container(
                               margin:
                                   const EdgeInsets.symmetric(horizontal: 30),
@@ -83,18 +64,20 @@ class LoginPersonal extends StatelessWidget {
                               decoration: BoxDecoration(
                                 border: Border.all(
                                   width: 2,
-                                  color:
-                                      Theme.of(context).colorScheme.onPrimary,
+                                  color:Color.fromRGBO(212, 208, 225, 1.0)
+
                                 ),
                                 borderRadius: BorderRadius.circular(15),
-                                color: ColorConstant.cardBgColor,
+                                color: Color.fromRGBO(208, 215, 225, 1),
                               ),
                               child: Column(
                                 children: [
                                   Padding(
                                     padding: const EdgeInsets.symmetric(
                                         vertical: 2.0, horizontal: 10),
-                                    child: TextFormField(
+                                    child:
+                                    TextFormField(
+
                                       cursorColor:
                                           Theme.of(context).colorScheme.primary,
                                       inputFormatters: [
@@ -143,9 +126,8 @@ class LoginPersonal extends StatelessWidget {
                                       ? Column(
                                           children: [
                                             Divider(
-                                              color: Theme.of(context)
-                                                  .colorScheme
-                                                  .onPrimary,
+                                              color: Color.fromRGBO(
+                                                  194, 200, 208, 1.0),
                                               thickness: 1,
                                             ),
                                             Padding(

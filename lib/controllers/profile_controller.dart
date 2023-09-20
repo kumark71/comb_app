@@ -82,6 +82,9 @@ class ProfileController extends GetxController {
   onNameChanged(val) {
     name.value = val;
   }
+  onGenderChanged(val) {
+    gender.value = val;
+  }
 
   onAgeChanged(val) {
     age.value = val;

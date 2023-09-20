@@ -51,7 +51,8 @@ class _HomeState extends State<Home> {
                   right: size.width * .02,
                   left: size.width * .02,
                 ),
-                child: Column(
+                child:
+                Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Padding(
@@ -141,56 +142,46 @@ class _HomeState extends State<Home> {
                     Expanded(
                       child: SizedBox(
                         child: Padding(
-                          padding: const EdgeInsets.only(bottom: 20),
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              GestureDetector(
-                                onTap: () {
-                                  if (authController.isProfessional == true) {
-                                    Get.toNamed("/patientdetails");
-                                  } else {
-                                    Get.toNamed('/qrscanner');
-                                  }
-                                },
-                                child: Stack(
-                                    children: [
-                                  Container(
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(0),
-                                        image: DecorationImage(
-                                          image: AssetImage(
-                                            "assets/banner/homepage1card.png",
-                                          ),
-                                          fit: BoxFit.fitWidth,
-                                        )),
-                                    height: size.height * .5,
-                                    width: size.width * 1,
-                                  ),
-                                  Positioned(
-                                      top: size.height * 0.04,
-                                      left: size.width * 0.05,
-                                      child: SizedBox(
-                                        width: size.width * 0.4,
-                                        child: Text(
-                                          "Take Test samples Reading",
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .titleMedium!
-                                              .copyWith(
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: size.width * .05,
-                                                color: Theme.of(context)
-                                                    .colorScheme
-                                                    .primary,
-                                              ),
+                              Stack(
+                                  children: [
+                                Container(
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(0),
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                          "assets/banner/homepage1card.png",
                                         ),
+                                        fit: BoxFit.fitWidth,
                                       )),
-                                      Positioned(
-                                        top: size.height * .2,
-                                        left: size.width * 0.03,
-                                        child: 
-                                        Column(
+                                  height: size.height * .5,
+                                  width: size.width * 1,
+                                ),
+                                Container(
+                                    margin: EdgeInsets.fromLTRB(size.width * 0.05, size.height * 0.04, 0, 0),
+                                    child:
+                                    Text(
+                                      'take_test_sample'.tr,
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodyLarge!
+                                          .copyWith(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: size.width * .05,
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .primary,
+                                          ),
+                                    )),
+                                    Container(
+                                      margin: EdgeInsets.only(top: size.height*0.19),
+                                      padding: EdgeInsets.all(5),
+                                      child:
+                                      Center(
+                                        child: Column(
                                           children: [
                                             GestureDetector(
                                               onTap: () {
@@ -211,31 +202,31 @@ class _HomeState extends State<Home> {
                                                     height: size.height * .06,
                                                     width: size.width * 0.9,
                                                   ),
-                                                  Positioned(
-                                                      top: size.height * 0.03,
-                                                      left: size.width * 0.05,
-                                                      child: SizedBox(
-                                                        width: size.width * 0.4,
-                                                        child: Text(
-                                                          "Pregnancy Test",
-                                                          style: Theme.of(context)
-                                                              .textTheme
-                                                              .titleMedium!
-                                                              .copyWith(
-                                                            fontWeight: FontWeight.bold,
-                                                            fontSize: size.width * .04,
-                                                            color: Theme.of(context)
-                                                                .colorScheme
-                                                                .surface,
-                                                          ),
-                                                        ),
-                                                      )),
+                                                  Positioned.fill(child: Center(
+                                                    child: Text(
+                                                      'pregnancy_test'.tr,
+                                                      style: Theme.of(context)
+                                                          .textTheme
+                                                          .titleMedium!
+                                                          .copyWith(
+                                                        fontWeight: FontWeight.bold,
+                                                        fontSize: size.width *.06,
+                                                        color: Theme.of(context)
+                                                            .colorScheme
+                                                            .surface,
+                                                      ),
+                                                    ),
+                                                  ))
+
+
                                                 ],
                                               ),
 
                                             ),
                                             SizedBox(height: 10),
+
                                             GestureDetector(
+
                                               onTap: () {
                                                 Get.toNamed("/home1");
                                               },
@@ -254,31 +245,29 @@ class _HomeState extends State<Home> {
                                                     height: size.height * .06,
                                                     width: size.width * 0.9,
                                                   ),
-                                                  Positioned(
-                                                      top: size.height * 0.03,
-                                                      left: size.width * 0.05,
-                                                      child: SizedBox(
-                                                        width: size.width * 0.4,
-                                                        child: Text(
-                                                          "Malaria Test",
-                                                          style: Theme.of(context)
-                                                              .textTheme
-                                                              .titleMedium!
-                                                              .copyWith(
-                                                            fontWeight: FontWeight.bold,
-                                                            fontSize: size.width * .04,
-                                                            color: Theme.of(context)
-                                                                .colorScheme
-                                                                .surface,
-                                                          ),
-                                                        ),
-                                                      )),
+                                                  Positioned.fill(child: Center(
+                                                    child: Text(
+                                                      'malaria_test'.tr,
+                                                      style: Theme.of(context)
+                                                          .textTheme
+                                                          .titleMedium!
+                                                          .copyWith(
+                                                        fontWeight: FontWeight.bold,
+                                                        fontSize: size.width *.06,
+                                                        color: Theme.of(context)
+                                                            .colorScheme
+                                                            .surface,
+                                                      ),
+                                                    ),
+                                                  ))
+
                                                 ],
                                               ),
 
                                             ),
                                             SizedBox(height: 10),
                                             GestureDetector(
+
                                               onTap: () {
                                                 Get.toNamed("/home1");
                                               },
@@ -297,31 +286,28 @@ class _HomeState extends State<Home> {
                                                     height: size.height * .06,
                                                     width: size.width * 0.9,
                                                   ),
-                                                  Positioned(
-                                                      top: size.height * 0.03,
-                                                      left: size.width * 0.05,
-                                                      child: SizedBox(
-                                                        width: size.width * 0.4,
-                                                        child: Text(
-                                                          "Dengue Test",
-                                                          style: Theme.of(context)
-                                                              .textTheme
-                                                              .titleMedium!
-                                                              .copyWith(
-                                                            fontWeight: FontWeight.bold,
-                                                            fontSize: size.width * .04,
-                                                            color: Theme.of(context)
-                                                                .colorScheme
-                                                                .surface,
-                                                          ),
-                                                        ),
-                                                      )),
+                                                  Positioned.fill(child: Center(
+                                                    child: Text(
+                                                      'dengue_test'.tr,
+                                                      style: Theme.of(context)
+                                                          .textTheme
+                                                          .titleMedium!
+                                                          .copyWith(
+                                                        fontWeight: FontWeight.bold,
+                                                        fontSize: size.width *.06,
+                                                        color: Theme.of(context)
+                                                            .colorScheme
+                                                            .surface,
+                                                      ),
+                                                    ),
+                                                  ))
                                                 ],
                                               ),
 
                                             ),
                                             SizedBox(height: 10),
                                             GestureDetector(
+
                                               onTap: () {
                                                 Get.toNamed("/home1");
                                               },
@@ -340,25 +326,23 @@ class _HomeState extends State<Home> {
                                                     height: size.height * .06,
                                                     width: size.width * 0.9,
                                                   ),
-                                                  Positioned(
-                                                      top: size.height * 0.03,
-                                                      left: size.width * 0.05,
-                                                      child: SizedBox(
-                                                        width: size.width * 0.4,
-                                                        child: Text(
-                                                          "HIV Test",
-                                                          style: Theme.of(context)
-                                                              .textTheme
-                                                              .titleMedium!
-                                                              .copyWith(
-                                                            fontWeight: FontWeight.bold,
-                                                            fontSize: size.width * .04,
-                                                            color: Theme.of(context)
-                                                                .colorScheme
-                                                                .surface,
-                                                          ),
-                                                        ),
-                                                      )),
+                                                  Positioned.fill(child: Center(
+                                                    child: Text(
+                                                      'hiv_test'.tr,
+                                                      style: Theme.of(context)
+                                                          .textTheme
+                                                          .titleMedium!
+                                                          .copyWith(
+                                                        fontWeight: FontWeight.bold,
+                                                        fontSize: size.width *.06,
+                                                        color: Theme.of(context)
+                                                            .colorScheme
+                                                            .surface,
+                                                      ),
+                                                    ),
+                                                  ))
+
+
                                                 ],
                                               ),
 
@@ -366,47 +350,39 @@ class _HomeState extends State<Home> {
                                           ],
                                         ),
                                       ),
-                                ]),
-                              ),
+                                    ),
+                              ]),
                               GestureDetector(
                                 onTap: () {
                                   Get.toNamed("/reports");
                                 },
-                                child: Stack(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(0),
-                                          image: DecorationImage(
-                                            image: AssetImage(
-                                              "assets/banner/homepage1report.png",
-                                            ),
-                                            fit: BoxFit.fill,
-                                          )),
-                                      height: size.height * .22,
-                                      width: size.width * 12,
+                                child:
+                                Container(
+                                  margin: EdgeInsets.only(bottom: 8),
+                                  padding: EdgeInsets.all( 8),
+                                  height: size.height * .22,
+                                  width: size.width * 12,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage( "assets/banner/homepage1report.png",), // Replace with your image path
+                                      fit: BoxFit.cover, // You can adjust the fit based on your requirements
                                     ),
-                                    Positioned(
-                                        top: size.height * 0.04,
-                                        left: size.width * 0.05,
-                                        child: SizedBox(
-                                          width: size.width * 0.4,
-                                          child: Text(
-                                            "screening_reports".tr,
-                                            style: Theme.of(context)
-                                                .textTheme
-                                                .titleMedium!
-                                                .copyWith(
-                                                  fontWeight: FontWeight.bold,
-                                                  fontSize: size.width * .05,
-                                                  color: Theme.of(context)
-                                                      .colorScheme
-                                                      .primary,
-                                                ),
-                                          ),
-                                        )),
-                                  ],
+                                  ),
+                                  child:
+                                  Text(
+                                    "screening_reports".tr,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .titleMedium!
+                                        .copyWith(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: size.width * .05,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .primary,
+                                    ),
+                                  ),
+                                  // Other child widgets can be added here
                                 ),
                               ),
                             ],

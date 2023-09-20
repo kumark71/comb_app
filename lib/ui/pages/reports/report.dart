@@ -213,6 +213,20 @@ class Screening_ReportState extends State<ScreeningReport> {
                                       DataColumn(
                                         label: Expanded(
                                           child: Text(
+                                            'test_type'.tr,
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .bodyMedium!
+                                                .copyWith(
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      DataColumn(
+                                        label: Expanded(
+                                          child: Text(
                                             'age'.tr,
                                             style: Theme.of(context)
                                                 .textTheme

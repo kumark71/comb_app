@@ -5,7 +5,7 @@ import 'package:hemoqr/controllers/reports_controller.dart';
 
 import '../controllers/home1_controller.dart';
 
-class HomeBinding extends Bindings {
+class Home1Binding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut<Home1Controller>(() => Home1Controller(), fenix: true);

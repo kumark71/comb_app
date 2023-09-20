@@ -32,9 +32,11 @@ import 'package:hemoqr/ui/pages/scanner_video_screen/result.dart';
 import 'package:hemoqr/ui/pages/scanner_video_screen/timer.dart';
 import '../bindings/faq_binding.dart';
 import '../bindings/home_binding.dart';
+
+
+import '../bindings/home1_binding.dart';
 import '../bindings/personal_account_binding.dart';
 import '../bindings/profile_binding.dart';
-import '../ui/home1/home_screen1.dart';
 import '../ui/pages/application_use/htu_1.dart';
 import '../ui/pages/patient_details/patient_details.dart';
 import '../ui/pages/profile/edit_profile.dart';
@@ -42,6 +44,7 @@ import '../ui/pages/profile/faq_screen.dart';
 import '../ui/pages/reports/report.dart';
 import '../ui/pages/scanner_video_screen/qr_scanner_old.dart';
 import '../ui/pages/splash_screen.dart/splash.dart';
+import '../ui/pages/home1/home_screen1.dart';
 
 var routes = [
   GetPage(name: "/", page: () => const SplashScreen()),
@@ -80,8 +83,8 @@ var routes = [
   ),
   GetPage(
     name: '/home1',
-    page: () => const Home1(),
-    binding: HomeBinding(),
+    page: () => Home1(),
+    binding: Home1Binding(),
   ),
   GetPage(
     name: '/reports',

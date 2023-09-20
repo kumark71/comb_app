@@ -38,13 +38,13 @@ class PatientController extends GetxController {
   void fullNameValidation(String val) {
     fullNameError.value = "";
 
-    if (val.trim().isEmpty) {
-      fullNameError.value = "Full name is required";
-    } else if (!RegExp(r'^[a-zA-Z ]+$').hasMatch(val)) {
-      fullNameError.value = "Invalid characters in full name";
-    } else {
-      fullNameError.value = "";
-    }
+    // if (val.trim().isEmpty) {
+    //   fullNameError.value = "Full name is required";
+    // } else if (!RegExp(r'^[a-zA-Z ]+$').hasMatch(val)) {
+    //   fullNameError.value = "Invalid characters in full name";
+    // } else {
+    //   fullNameError.value = "";
+    // }
   }
 
   void ageChanged(int val) {
@@ -57,28 +57,28 @@ class PatientController extends GetxController {
 
   void ageValidation(int val) {
     ageError.value = "";
-    if (val <= 0) {
-      ageError.value = "Age must be greater than zero";
-    } else {
-      ageError.value = "";
-    }
+    // if (val <= 0) {
+    //   ageError.value = "Age must be greater than zero";
+    // } else {
+    //   ageError.value = "";
+    // }
   }
 
   void mobileNumberValidation(String val) {
     mobileNumberError.value = "";
-    if (!RegExp(r'^[0-9]{10}$').hasMatch(val)) {
-      mobileNumberError.value = "Invalid mobile number";
-    } else {
-      mobileNumberError.value = "";
-    }
+    // if (!RegExp(r'^[0-9]{10}$').hasMatch(val)) {
+    //   mobileNumberError.value = "Invalid mobile number";
+    // } else {
+    //   mobileNumberError.value = "";
+    // }
   }
 
   void submit() {
     bool hasError = false;
 
     if (fullName.value.isEmpty) {
-      fullNameError.value = "Full name is required";
-      hasError = true;
+      fullName.value='a';
+      // hasError = true;
     } else {
       fullNameError.value = "";
     }

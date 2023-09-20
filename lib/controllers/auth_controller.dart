@@ -31,6 +31,7 @@ class AuthController extends GetxController {
   bool isLogin = false;
   bool isProfessional = false;
 
+
   // Professional
   var ProfessionalUserStatus = "".obs;
 
@@ -316,11 +317,7 @@ class AuthController extends GetxController {
       } else {
         print("isFirstTime : " + isFirstTime);
         isLogin = false;
-        if (isFirstTime != "false") {
-          Get.offAllNamed("/onboard");
-        } else {
           Get.offAllNamed("/loginPersonal");
-        }
       }
     });
   }
